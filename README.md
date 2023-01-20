@@ -1,4 +1,4 @@
-# Simple Tic-Tac-Toe React App
+# [Simple Tic-Tac-Toe React App](https://kodeiak.github.io/react-tic-tac-toe/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). I followed the React Tutorial to build the foundation of this app and then added on additional features
 
