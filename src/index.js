@@ -101,7 +101,7 @@ class Game extends React.Component {
         return (
             <li key={move}>
                 <button
-                    onClick={() => this.jumpTo(step.move || move)}
+                    onClick={() => this.jumpTo(step.move || 0)}
                     className={step.move === this.state.stepNumber ? "active" : ""} // TODO-PW <<DONE>> not working properly for game start and latest move
                 >{desc}</button>
             </li>
