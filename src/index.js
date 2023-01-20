@@ -6,7 +6,7 @@ function Square(props) {
     return (
         <button 
             className={props.winningSquares.some(square => square === props.square) ? "square winning" : "square"}
-            onClick={props.onClick} // ? in function component, does not have to be {() => this.props.onClick()} 
+            onClick={props.onClick}
         >
             {props.value}
         </button>
@@ -18,7 +18,7 @@ class Board extends React.Component {
         return ([0,1,2].map( square => {
             let squareNum = row + square;
             return (
-                <Square // value and onClick are props being passed down from Board to child component Square
+                <Square
                     value={this.props.squares[squareNum]} 
                     onClick={() => this.props.onClick(squareNum, [row/3, square])}
                     key={squareNum}
@@ -93,7 +93,6 @@ class Game extends React.Component {
         const history = this.state.sortAscending ? this.state.history : this.state.history.slice(0).reverse();
         const current = this.state.history[this.state.stepNumber];
         const winner = calculateWinner(current.squares);
-        // TODO-PW <<DONE>> reverse order of list of moves based on sortAsceding state
         const moves = history.map((step, move) => {
             const desc = step.move ?
             `Go to move # ${step.move} (${step.location})` :
@@ -102,7 +101,7 @@ class Game extends React.Component {
             <li key={move}>
                 <button
                     onClick={() => this.jumpTo(step.move || 0)}
-                    className={step.move === this.state.stepNumber ? "active" : ""} // TODO-PW <<DONE>> not working properly for game start and latest move
+                    className={step.move === this.state.stepNumber ? "active" : ""}
                 >{desc}</button>
             </li>
         );
@@ -113,7 +112,6 @@ class Game extends React.Component {
         if (winner) {
             status = `Winner: ${winner.winner}`;
             winningSquares = winner.winningSquares;
-            // <<DONE>> TODO-PW highlight winnning squares
         } else if(this.state.stepNumber === 9) {
             status = "Game ends in a draw"
         } else {
@@ -133,7 +131,6 @@ class Game extends React.Component {
                     <div>
                         {status}
                     </div>
-                    {/* TODO-PW <<DONE>> add onClick that changes state sortAscending */}
                     <button
                         onClick={() => this.setState({sortAscending : !this.state.sortAscending})}
                     >
