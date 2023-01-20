@@ -4,7 +4,8 @@ body {
 }
 
 ol, ul {
-  padding-left: 30px;
+  list-style-type: none;
+  padding-inline-start: 0;
 }
 
 .board-row:after {
@@ -21,15 +22,15 @@ ol, ul {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 75px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  line-height: 128px;
+  height: 128px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 128px;
 }
 
 .square:focus {
@@ -43,8 +44,19 @@ ol, ul {
 .game {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
 }
 
 .game-info {
   margin-left: 20px;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.winning {
+  background-color: #00800075;
 }
