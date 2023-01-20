@@ -1,6 +1,25 @@
-# Getting Started with Create React App
+# Simple Tic-Tac-Toe React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). I followed the React Tutorial to build the foundation of this app and then added on additional features
+
+## Objective
+
+Build a simple app with React that allows you to play tic-tac-toe with yourself or a friend in the same room.  
+
+## React Tutorial Features
+
+- Render tic-tac-toe grid
+- Allow "X" and "O" turns
+- Declare winner
+- Track moves and allow navigating to past moves
+
+## My Features
+
+- When someone wins, highlight the three winning squares
+- Toggle button to sort moves in ascending or descending order
+- When no one wins, indicate draw
+- Refactored code to render grid using loops rather than hard code
+- Bold currently selected item in move list
 
 ## Available Scripts
 
